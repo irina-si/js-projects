@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="page">
+    <header class="header page__header">
+        <div class="title">TO-DO LIST</div>
+        <form class="menu">
+            <span class="menu__button" id="showAll">Show all</span>
+            <span class="menu__button" id="completed">Completed</span>
+            <span class="menu__button" id="incompleted">Incompleted</span>
+            <form class="form">
+                <input type="text" class="form__field" placeholder="Search...">
+                <input type="submit" class="form__submit" value="Search">
+            </form>
+        </form>
+    </header>
+    <div class="body">
+        <div class="header body__header">
+            <form class="form" id="addItemForm">
+                <label>
+                 Add a new task:
+                <input type="text" class="form__field" name="itemText" placeholder="What else should be done?" size=40>
+                <input type="submit" class="form__submit" value="Add!">
+                </label>
+            </form>
+        </div>
+        <ul class="list">
+        
+        </ul>
+    </div>
+    <footer class="footer page__footer">
+    </footer>
+    <script src="script.js"> </script>
+</body>
+</html>

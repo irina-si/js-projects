@@ -3,6 +3,24 @@ ul {
     padding: 0px; 
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+	outline: none;
+	-moz-appearance: none;
+    border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
+    resize: none;
+    width: 50%;
+    text-align: left;
+    height: 20px;
+    overflow: hidden;
+}
+
 .page {
     background-color: #d1ecf0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -75,20 +93,37 @@ ul {
     opacity: 0.3;
 }
 
-#x {
-    color: rgb(129, 116, 116);
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
+.controls {
+    width: 12%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.button__edit {
+    box-sizing: border-box;
+    background: url(img/edit-button.jpg) 100% 100% no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    }
+
+.button__delete {
+    box-sizing: border-box;
+    background: url(img/delete-button.png) 100% 100% no-repeat;
     width: 30px;
     height: 30px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
+    background-size: cover;
   }
 
-#x:hover {
-    color: #f72828;
+.button__delete:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background: url(img/delete-button-hover.png) 100% 100% no-repeat;
+    background-size: cover;
+} 
+
+.button__edit:hover {
     cursor: pointer;
     transition: 0.3s;
 }

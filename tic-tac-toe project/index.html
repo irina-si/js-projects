@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <main class="main">
+      <section class="gameScore" id="game-score">
+        <div class="gameScore__container">
+          <button class="button player" id="player-one">
+            <span class="player__sign player__sign_tick"></span>
+            <span class="player__score">-</span>
+            </button>  
+          <button class="button player" id="player-two">
+            <span class="player__sign player__sign_tock"></span>
+            <span class="player__score">-</span>
+          </button>
+        </div>
+        <div class="gameScore__host">Start game</div>
+      </section>
+      <section class="playindField" id="playing-field">
+        <div class="winnerCover winnerCover_hidden" tabindex="0"></div>
+        <table class="board">
+            <tr>
+                <td class="board__cell" id="0"></td>
+                <td class="board__cell" id="1"></td>
+                <td class="board__cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="board__cell" id="3"></td>
+                <td class="board__cell" id="4"></td>
+                <td class="board__cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="board__cell" id="6"></td>
+                <td class="board__cell" id="7"></td>
+                <td class="board__cell" id="8"></td>
+            </tr>
+        </table>
+      </section>
+      <section class="button__wrapper">
+        <button class="button" id="newGameButton"> Play a new game</button>
+      </section>
+  </main>  
+  <script src="script.js"></script>
+</body>
+</html>

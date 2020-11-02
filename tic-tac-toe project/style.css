@@ -1,0 +1,153 @@
+.main {
+    width: 600px;
+    margin: auto;
+    border: 3px solid rgba(228, 213, 7, 0.664);
+    border-radius: 10px;
+    font-family: 'Itim', cursive;  
+}
+
+.gameScore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.gameScore__container {
+    width: 50%;
+    margin: auto;
+    padding: 7%;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.gameScore__host {
+    font-size: 0.9em;
+    color: rgb(92, 92, 92);
+    padding: 3%;
+}
+
+.playindField {
+    background-color: rgb(235, 210, 72);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.winnerCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 9000;
+    width: 60%;
+    height: 60%;
+    background-color: rgb(241, 241, 240);
+    opacity: 0.9;
+    border-radius: 5px;
+} 
+
+.winnerCover:focus {
+    outline: none;
+    border: none;
+}
+
+.winnerCover_hidden {
+    display: none;
+}
+
+.board {
+    table-layout: fixed;
+    width: 50%;
+    border-collapse: collapse; 
+    border: 6px solid rgb(235, 210, 72);
+}
+
+.board__cell {
+    width: 33.33%;
+    position: relative;
+    border: 5px solid rgba(0, 0, 0, 0.712); 
+  }
+
+.board__cell_tick {
+    background: url('./pictures/cross.png') 80% 80% no-repeat;
+    background-position: center center;
+    background-size: contain; 
+}
+
+.board__cell_tock {
+    background: url('./pictures/round.png') 80% 80% no-repeat;
+    background-position: center center;
+    background-size: contain;  
+}
+
+.board__cell:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+.board__cell.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.button__wrapper {
+    width: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-family: inherit;
+    font-size: 1.2em;
+    width: auto;
+    height: 50px;
+	border-radius: 10px;
+	background-color: #fff;
+    border-width: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.gameScore__container .button {
+    width: 45%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.player__sign {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+}
+
+.player__sign_tick {
+    background: url('./pictures/cross.png') no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.player__sign_tock {
+    background: url('./pictures/round.png') no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+

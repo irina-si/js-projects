@@ -151,8 +151,7 @@ function editItem(event) {
     let li = event.target.closest("li");
     // li.tabIndex = "1";
     li.insertAdjacentHTML("afterbegin", 
-    `<textarea id='edit' style="display:none" wrap="off">
-     ${li.querySelector("label").textContent}</textarea>`);
+    `<textarea id='edit' style="display:none" wrap="off" maxlength="55">${li.querySelector("label").textContent}</textarea>`);
 
     let textarea = document.getElementById("edit");
     console.log(textarea);
@@ -183,6 +182,7 @@ function editItem(event) {
     data.forEach((item) => {
         if (item.id == currentId) {
             item.value = li.querySelector("label").textContent;
+            item.isChecked = false;
         }
     })
     localStorage.setItem('items', JSON.stringify(data));
